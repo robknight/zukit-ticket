@@ -1,7 +1,7 @@
 {
-  "name": "zukit",
-  "version": "0.2.4",
-  "description": "Like RainbowKit for the Zuzalu Passport",
+  "name": "zuauth-ticket",
+  "version": "0.1",
+  "description": "Simple client-side authentication of Zupass ZK tickets",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,17 +9,20 @@
     "dev": "tsup src/index.ts --dts --watch",
     "test": "tsc"
   },
-  "repository": "git+https://github.com/dcposch/zukit.git",
-  "author": "DC Posch",
+  "repository": "git+https://github.com/robknight/zuauth-ticket.git",
+  "author": "Rob Knight",
   "license": "MIT",
-  "bugs": "https://github.com/dcposch/zukit/issues",
-  "homepage": "https://github.com/dcposch/zukit#readme",
+  "bugs": "https://github.com/robknight/zuauth-ticket/issues",
+  "homepage": "https://github.com/robknight/zuauth-ticket#readme",
   "dependencies": {
-    "@pcd/passport-interface": "^0.5.1",
-    "@pcd/pcd-types": "^0.5.1",
-    "@pcd/semaphore-group-pcd": "^0.5.1",
-    "@pcd/semaphore-signature-pcd": "^0.5.1",
-    "styled-components": "^5.3.10"
+    "@pcd/eddsa-ticket-pcd": "^0.3.0",
+    "@pcd/pcd-types": "^0.8.0",
+    "@pcd/semaphore-group-pcd": "^0.8.0",
+    "@pcd/semaphore-identity-pcd": "^0.8.0",
+    "@pcd/semaphore-signature-pcd": "^0.8.0",
+    "@pcd/zk-eddsa-event-ticket-pcd": "^0.2.1",
+    "js-sha256": "^0.10.1",
+    "styled-components": "^6.1.0"
   },
   "peerDependencies": {
     "react": "^18.2.0"
@@ -29,10 +32,12 @@
     "@types/libsodium-wrappers": "^0.7.10",
     "@types/node": "^20.1.0",
     "@types/react": "^18.2.5",
-    "@types/styled-components": "^5.1.26",
+    "@types/styled-components": "^5.1.29",
     "@types/uuid": "^9.0.1",
-    "eslint": "^8.40.0",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
   }
 }
